@@ -1,0 +1,368 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*etsy css*/
+body {
+  background-color: #f5f5f1;
+  font-family: "Arial","Helvetica",sans-serif;
+  font-size: 12px;
+  text-align: center;
+  position: relative;
+}
+
+#header {
+  background-color:#ffffff;
+  width: 100%;
+  height: 80px;
+  border-bottom: 1px solid #d3d3d3;
+  font-size: 14px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1),0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+.header-wrapper {
+  width:980px;
+  height: 80px;
+  margin: auto;
+}
+
+.header-logo{
+  width:100px;
+  height:80px;
+  margin-right: 20px;
+  float:left;
+}
+
+.header-logo img {
+  margin-top:20px;
+}
+
+.header-search{
+  width:350px;
+  height:80px;
+  float:left;
+}
+/*search bar styling*/
+form{
+  margin:0 auto;
+}
+
+.search-entry { 
+  padding-top:30px; 
+  height:50px;
+}
+
+.search-entry .field {
+  height:20px;
+  width:239px;
+  padding:6px;
+}
+.search-entry input[type=text]{
+  border:1px solid #d0d0d0;
+  background-color:#fcfcfc;
+}
+
+.header-search input[type=submit], .header-search input[type=button]:hover {
+  height: 34px;
+  width: 60px;
+  position:relative; 
+  left:-6px;
+  border:1px solid #0192B5;
+  background: #0192B5; /* Old browsers */
+  color:#ffffff;
+  cursor: pointer;
+}
+
+/*header browse styling*/
+.header-browse {
+  width:100px;
+  height:50px;
+  float:left;
+  padding-top:30px;
+}
+
+.header-browse select {
+    width:80px;
+    height:35px;
+    border:1px solid #d3d3d3;
+    background-color: #ffffff;
+    font-size:13px;
+    color: #d3d3d3;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    padding:10px 4px;
+}
+
+/*customer toobar*/
+.customer-toolbar {
+  float:right;
+  padding-top:38px;
+}
+.customer-toolbar ul li{
+  display: inline;
+  padding:10px;
+  margin:5px;
+}
+
+.customer-toolbar ul li a{
+  text-decoration:none;
+  color:#0192B5;
+}
+
+.customer-toolbar .sign-in{
+  border: 1px solid #0192B5;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+
+}
+.customer-toolbar .cart {
+  border-left: 1px solid #d3d3d3;
+  padding:14px;
+}
+
+.customer-toolbar .cart a {
+  font-size:12px;
+  color:#666666;
+}
+
+.customer-toolbar .cart a:hover {
+  color:#000000;
+  
+}
+/*page content*/
+#page-wrapper {
+  width: 980px;
+  margin: auto;
+}
+
+#main-content {
+  width: 980px;
+  height: 1000px;
+}
+
+#main-content-left {
+    float:left;
+    width: 200px;
+    text-align:left;
+    margin-left:15px;
+    margin-top:10px;
+}
+
+#main-content-left h4 {
+  color: #666666;
+  font-weight:bold;
+  margin:10px;
+}
+
+#main-content-left .results{
+    width:200px;
+    background-color:#ffffff;
+    border:1px solid #ececec;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    padding:20px 10px 20px 10px;
+    margin-top:10px;
+}
+
+.results {
+  text-align: left;
+  width:100px;
+  font-size:14px;
+}
+
+.results ul li {
+  display:block;
+}
+
+.results ul li a {
+  text-decoration:none;
+  color:#0192B5;
+  padding:10px;
+  }
+
+.results ul li input {
+  margin-left: 10px;
+}
+
+input[type=radio]{
+  border-radius: 3px;
+  border: 1px solid #C3BEBC;
+}
+
+input[type=radio]:checked {
+
+}
+
+#main-content-right {
+  float:right;
+  width: 725px;
+  height:100%;
+  padding-top:20px;
+  text-align: left;
+}
+
+#product-results {
+  margin-top: 10px
+}
+
+#product {
+  display: inline-block;
+  width:190px;
+  height:180px;
+  background-color: #ffffff;
+  padding:10px;
+  margin: 0px 10px;
+  border:1px solid #ececec;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  margin: 0px 5px 5px;
+}
+
+#product .image {
+  width: 214px;
+  height: 135px;
+}
+
+#product .name {
+  width: 190px;
+  text-align: left;
+  margin-top:15px;
+  color: #666666;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#product .store-id {
+  float:left;
+  margin-top:10px;
+  color: #d3d3d3;
+ }
+
+#product .price span{
+  float:right;
+  margin-top:10px;
+  color: #78c042;
+  font-weight: bold;
+}
+
+#footer {
+  clear: both;
+  position: relative;
+  width:980px;
+  height:100px;
+  text-align: left;
+  vertical-align: top;
+  margin: auto;
+  margin-top: 100%;
+  bottom: 0px;
+}
+
+#footer a{
+  text-decoration:none;
+  color:#0192B5;
+  padding-top: 5px;
+}
+
+#footer .column {
+  display: inline-block;
+  width: 193px;
+  vertical-align: top;
+}
+
+#footer ul li h4 {
+ color: #666666;
+  font-weight:bold;
+  margin:10px;
+  text-align: left;
+}
+
+
+#footer .footer-global {
+  width: 980px;
+  padding-top: 20px;
+  vertical-align: middle;
+}
+#footer .footer-global input[button] {
+  display: inline;
+  margin:auto;
+}
+
+#footer .footer-legal {
+  width:980px;
+  height: 30px;
+  margin: auto;
+}
+
+#footer .footer-legal a {
+  margin-left: 15px;
+}
+
+
+
+
+
+
+
+
+.clear-fix {
+  clear:both;
+}
+
+/** { background-color: rgba(255,0,0,.2); }
+* * { background-color: rgba(0,255,0,.2); }
+* * * { background-color: rgba(0,0,255,.2); }
+* * * * { background-color: rgba(255,0,255,.2); }
+* * * * * { background-color: rgba(0,255,255,.2); }
+* * * * * * { background-color: rgba(255,255,0,.2); }
+*/

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>whiskey on Etsy, a global</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+<div id="header">
+  <div class="header-wrapper">
+        <div class="header-logo">
+          <a href="https://www.etsy.com/?ref=lgo"><img src="http://upload.wikimedia.org/wikipedia/en/c/ce/Etsy_logo.png" alt="Etsy, Inc." style="width: 80px; height: 46px"/></a>
+        </div>
+        <div class="header-search">
+           <!-- <form action="etsy_search">
+             <div class="field"><input type="text" name="q"></div><div class="actions"><input type="submit" value="Search"></div>
+           </form> -->
+          <form action="etsy_search">
+            <div class="search-entry"><input class="field" type="text" name="q"><input type="submit" value="Search">
+            </div>
+          </form>
+        </div>
+        <div class="header-browse">
+          <select>
+            <option value="Browse">Browse</option>
+            <option value="Spring Celebrations">Spring Celebrations</option>
+            <option value="Valentine's Day">Valentine's Day</option>
+            <option value="Gift Ideas">Gift Ideas</option>
+            <option value="Art">Art</option>
+            <option value="Home & Living">Home & living</option>
+            <option value="Mobile Accesories">Mobile Accessories</option>
+            <option value="Jewelry">Jewelry</option>
+            <option value="Women">Women</option>
+            <option value="Men">Men</option>
+            <option value="Kids">Kids</option>
+            <option value="Vintage">Vintage</option>
+            <option value="Weddings">Weddings</option>
+            <option value="Craft Supplies">Craft Supplies</option>
+          </select>  
+        </div>
+        <div class="customer-toolbar">
+          <ul>
+          <li class="help">
+          <a href="https://www.etsy.com/help?ref=hdr" class="customer-toolbar-link">Help</a>
+          <li class="register">
+          <a href="https://www.etsy.com/join?ref=hdr&from_page=https://www.etsy.com/search" class="customer-toolbar-link">Register</a>
+          <li class="sign-in">
+          <a href="https://www.etsy.com/signin?ref=hdr&from_page=https://www.etsy.com/search" class="customer-toolbar-link">Sign In</a>
+          <li class="cart">
+          <a href="https://www.etsy.com/cart?ref=hdr" class="customer-toolbar-link"><img src="file:///Users/nray1/Desktop/etsy-cart.png" />Cart</a>
+        </ul>
+        </div>
+  </div>
+</div>
+    <div id="page-wrapper">
+      <div id="main-content">
+        <div id="main-content-left">
+          <h4>Show results for:</h4>
+          <div class="results">
+            <h4>Item Type</h4>
+            <ul class="sort-item-type">
+              <li><input type="radio" name="item-type" value="all-items" checked><a href="https://www.etsy.com/search?q=whiskey&all=1">All Items</a></li>
+              <li><input type="radio" name="item-type" value="handmade" ><a href="https://www.etsy.com/search/handmade?q=whiskey">Handmade</a></li>
+              <li><input type="radio" name="item-type" value="vintage"><a href="https://www.etsy.com/search/vintage?q=whiskey">Vintage</a></li>
+              <li><input type="radio" name="item-type" value="craft-supplies"><a href="https://www.etsy.com/search/supplies?q=whiskey">Craft Supplies</a></li>
+            </ul>
+          </div><!-- results -->
+        </div>
+        <div id="main-content-right">
+          <h4><span style="font-weight=bold">&lsquo;whiskey&rsquo;</span> We found 20,534 items!</h4>
+            <div id="product-results">
+              <!-- <div id="product">
+                <div class="image">Image</div>
+                <div class="name">Name</div>
+                <div class="store-id">Store Name</div>
+                <div class="price">$100.00</div>
+              </div>-->
+            </div><!--product results-->
+            <% if @results %>
+              <% @results.each do |l| %>
+              <div id="product">
+                <ol>
+                  <li>
+                    <div class="image">
+                      <img style="height: 170 px; width: 185px;"src=<%= l["Images"][0]["url_170x135"] %>>
+                    </div>
+                    <div class="name">
+                      <%= l["title"] %>
+                    </div>
+                    <div class="store-id">
+                      <%= l["Shop"]["shop_name"] %>
+                    </div>
+                    <div class="price">
+                      <span>USD</span>
+                      <span><%= l["price"] %></span>
+                      <span>$</span>
+                    </div>
+                  </li>
+                </div>
+              </ol>
+            <% end %>
+            <% end %>
+        </div><!-- main-content right -->
+      </div><!-- main-content -->
+
+      <div id="footer" class="clear-fix">
+        <div class="footer-links">
+          <div class="column">
+          <ul class="fl-open">
+            <li><h4>Turn Your Passion Into a Business</h4></li>
+            <li><a class="fl-open-button" href="https://www.etsy.com/sell/?ref=ftr">Open a Shop</a></li>
+          </ul>
+          <ul class="fl-sell">
+            <li><h4>Sell on Etsy</h4></li>
+            <li><a href="https://blog.etsy.com/en/category/seller-handbook/?ref=ftr">Seller Handbook</a></li>
+            <li><a href="https://www.etsy.com/reader?ref=ftr">Etsy Credit Card Reader</a></li>
+          </ul>
+          </div>
+          <div class="column">
+          <ul class="fl-join">
+            <li><h4>Join the Community</h4></li>
+            <li><a href="https://www.etsy.com/teams/?ref=ftr">Teams</a></li>
+            <li><a href="https://www.etsy.com/forums/?ref=ftr">Forums</a></li>
+            <li><a href="https://www.etsy.com/community/events/?ref=ftr">Upcoming Events</a></li>
+            <li><a href="https://www.etsy.com/affiliates?ref=ftr">Affiliates</a></li>
+          </ul>
+          </div>
+          <div class="column">
+          <ul class="fl-discover">
+            <li><h4>Discover and Shop</h4></li>
+            <li><a href="https://www.etsy.com/giftcards/?ref=ftr">Gift Cards</a></li>
+            <li><a href="https://blog.etsy.com/en/?ref=ftr">Blog</a></li>
+            <li><a href="https://www.etsy.com/pages/?ref=ftr">Tastemakers</a></li>
+            <li><a href="https://www.etsy.com/mobile/?ref=ftr">Mobile Apps</a></li>
+            <li><a href="https://www.etsy.com/registry/?ref=ftr">Gift Registries</a></li>
+            <li><a href="https://www.etsy.com/wholesale?ref=ftr">Wholesale</a></li>
+          </ul>
+          </div>
+          <div class="column">
+          <ul class="fl-get-to-know">
+            <li><h4>Get to Know Us</h4></li>
+            <li><a href="https://www.etsy.com/about/?ref=ftr">About</a></li>
+            <li><a href="https://www.etsy.com/careers/?ref=ftr">Careers</a></li>
+            <li><a href="https://www.etsy.com/press/?ref=ftr">Press</a></li>
+            <li><a href="https://www.etsy.com/developers/?ref=ftr">Developers</a></li>
+          </ul>
+          </div>
+          <div class="column">
+          <ul class="fl-social">
+            <li><h4>Follow Etsy</h4></li>
+            <li><a href="https://www.facebook.com/Etsy">Facebook</a></li>
+            <li><a href="https://twitter.com/etsy/">Twitter</a></li>
+            <li><a href="https://www.pinterest.com/etsy/">Pinterest</a></li>
+            <li><a href="http://instagram.com/etsy">Instagram</a></li>
+          </ul>
+          </div>
+        </div>
+        <div class="footer-global clear-fix">
+            <input type="button" value="United States">
+            <input type="button" value="English(US)">
+            <input type="button" value="$ USD">
+            <a href="https://www.etsy.com/help/?ref=ftr"><input type="button" value="Help"></a>
+        </div>
+        <div class="footer-legal clear-fix">
+          <ul>
+            <li class="copyright">© 2015 Etsy, Inc.<a href="https://www.etsy.com/help/article/479/?ref=ftr">Terms</a><a href="https://www.etsy.com/help/article/480/?ref=ftr">Privact</a><a href="https://www.etsy.com/help/article/482/?ref=ftr">Copyright</a><a href="https://www.etsy.com/help/article/3293?ref=ftr">Interest-based Ads</a>
+          </ul>
+        </div>
+      </div><!-- footer -->
+
+    </div> <!-- wrapper -->
+  
+  </body>
+
+</html>
